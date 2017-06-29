@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A83B123-4AC6-4260-B72A-843C574AB9E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMS.Framework</RootNamespace>
+    <AssemblyName>GMS.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\Lib\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib, Version=3.0.0.99, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contract\AuditableAttribute.cs" />
+    <Compile Include="Contract\BusinessException.cs" />
+    <Compile Include="Contract\CallContext.cs" />
+    <Compile Include="Contract\IAuditable.cs" />
+    <Compile Include="Contract\IPagedList.cs" />
+    <Compile Include="Contract\ModelBase.cs" />
+    <Compile Include="Contract\Operater.cs" />
+    <Compile Include="Contract\PagedList.cs" />
+    <Compile Include="Contract\Request.cs" />
+    <Compile Include="DAL\DbContextBase.cs" />
+    <Compile Include="DAL\IDataRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\AppSettings.cs" />
+    <Compile Include="Utility\AssemblyHelper.cs" />
+    <Compile Include="Utility\Caching.cs" />
+    <Compile Include="Utility\Collection.cs" />
+    <Compile Include="Utility\Converter.cs" />
+    <Compile Include="Utility\Cookie.cs" />
+    <Compile Include="Utility\Diff.cs" />
+    <Compile Include="Utility\Encrypt.cs" />
+    <Compile Include="Utility\EnumHelper.cs" />
+    <Compile Include="Utility\Exception.cs" />
+    <Compile Include="Utility\Fetch.cs" />
+    <Compile Include="Utility\FileWatchHelper.cs" />
+    <Compile Include="Utility\GeoHelper.cs" />
+    <Compile Include="Utility\ImageUtil.cs" />
+    <Compile Include="Utility\JsUtil.cs" />
+    <Compile Include="Utility\MailHelper.cs" />
+    <Compile Include="Utility\NetHelper.cs" />
+    <Compile Include="Utility\ObjectHelper.cs" />
+    <Compile Include="Utility\PermutationAndCombination.cs" />
+    <Compile Include="Utility\RegExp.cs" />
+    <Compile Include="Utility\SerializationHelper.cs" />
+    <Compile Include="Utility\SerializeHelper.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
+    <Compile Include="Utility\StringUtil.cs" />
+    <Compile Include="Utility\ValidateCode\AnimatedGifEncoder.cs" />
+    <Compile Include="Utility\ValidateCode\GifDecoder.cs" />
+    <Compile Include="Utility\ValidateCode\LZWEncoder.cs" />
+    <Compile Include="Utility\ValidateCode\NeuQuant.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCodeType.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style1.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style10.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style11.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style12.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style13.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style14.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style2.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style3.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style4.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style5.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style6.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style7.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style8.cs" />
+    <Compile Include="Utility\ValidateCode\ValidateCode_Style9.cs" />
+    <Compile Include="Utility\WcfServiceProxy.cs" />
+    <Compile Include="Web\AuthorizeFilterAttribute.cs" />
+    <Compile Include="Web\AuthorizeIgnoreAttribute.cs" />
+    <Compile Include="Web\ControllerBase.cs" />
+    <Compile Include="Web\Controls\CheckBoxList.cs" />
+    <Compile Include="Web\Controls\HtmlPrefixScope.cs" />
+    <Compile Include="Web\Controls\MvcPager\PagerBuilder.cs" />
+    <Compile Include="Web\Controls\MvcPager\PagerHelper.cs" />
+    <Compile Include="Web\Controls\MvcPager\PagerItem.cs" />
+    <Compile Include="Web\Controls\MvcPager\PagerOptions.cs" />
+    <Compile Include="Web\Controls\RadioBoxList.cs" />
+    <Compile Include="Web\Controls\SeoPager.cs" />
+    <Compile Include="Web\ExplicitException.cs" />
+    <Compile Include="Web\HttpContextBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

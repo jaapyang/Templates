@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E905FFE6-A1D5-48B2-81B7-8E8D4BC5F895}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMS.Web</RootNamespace>
+    <AssemblyName>GMS.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControllerBase.cs" />
+    <Compile Include="CookieContext.cs" />
+    <Compile Include="IAuthCookie.cs" />
+    <Compile Include="PermissionAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContext.cs" />
+    <Compile Include="StaticFileHelper.cs" />
+    <Compile Include="UserContext.cs" />
+    <Compile Include="VerifyCodeHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GMS.Account\GMS.Account.csproj">
+      <Project>{1d575955-bf6d-423d-b28f-aa3f38989e56}</Project>
+      <Name>GMS.Account</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GMS.Cms\GMS.Cms.csproj">
+      <Project>{349a4183-d010-4f41-b0af-f43468a7184e}</Project>
+      <Name>GMS.Cms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GMS.Core\GMS.Core.csproj">
+      <Project>{283de850-0877-49aa-8140-744e55d0c9bb}</Project>
+      <Name>GMS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GMS.Crm\GMS.Crm.csproj">
+      <Project>{c09405b6-a53c-49de-a34e-a29aa0306ea9}</Project>
+      <Name>GMS.Crm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GMS.Framework\GMS.Framework.csproj">
+      <Project>{1a83b123-4ac6-4260-b72a-843c574ab9e7}</Project>
+      <Name>GMS.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GMS.OA\GMS.OA.csproj">
+      <Project>{982048f4-db99-40d2-9f85-7b3469d23cb5}</Project>
+      <Name>GMS.OA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
